@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: process.env.NODE_ENV === "production" ? "build" : ".next",
   images: {
     unoptimized: true,
     domains: [
@@ -39,6 +38,7 @@ const nextConfig = {
       },
     ],
   },
+  output: "standalone", // ✅ Empfohlen für Vercel
 };
 
 export default nextConfig;
